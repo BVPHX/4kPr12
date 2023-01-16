@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Pr12.InfoPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Имя"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Entry x:Name="nameEntry"></Entry>
+            <Label Text="Телефон"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Entry x:Name="phoneEntry"></Entry>
+            <Label Text="Адрес"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Entry x:Name="addressEntry"></Entry>
+            <Button x:Name="addBtn" Text="Добавить" Clicked="addBtn_Clicked"></Button>
+            <Button x:Name="cngBtn" Text="Изменить" Clicked="cngBtn_Clicked"></Button>
+            <Button x:Name="dltBtn" Text="Удалить" Clicked="dltBtn_Clicked"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

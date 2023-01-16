@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Pr12.MainPage" BackgroundColor="Black">
+
+    <StackLayout>
+        <Frame CornerRadius="20" BackgroundColor="Black">
+            <Label Text="Таблица абонентов" TextColor="White" BackgroundColor="Black" HorizontalOptions="CenterAndExpand"></Label>
+        </Frame>
+        <Frame BackgroundColor="White" CornerRadius="20">
+            <StackLayout>
+                <ListView x:Name="abonentList" BackgroundColor="White" ItemTapped="TappedItem">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout>
+                                    <Label Text="{Binding Name}" FontSize="35" TextColor="Black"></Label>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <Button Text="Добавить" CornerRadius="10" BackgroundColor="Black" Clicked="Add_click"></Button>
+            </StackLayout>
+        </Frame>
+    </StackLayout>
+
+</ContentPage>
