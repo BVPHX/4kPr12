@@ -24,5 +24,7 @@ namespace Pr12.Droid
 
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
+
+        
     }
 }

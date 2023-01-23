@@ -34,19 +34,19 @@ namespace Pr12
 
         private void addBtn_Clicked(object sender, EventArgs e)
         {
-            MainPage.abonents.Add(new Abonent { Address = nameEntry.Text, Name = nameEntry.Text, Phone = phoneEntry.Text });
+            App.abonents.Add(new Abonent { Address = nameEntry.Text, Name = nameEntry.Text, Phone = phoneEntry.Text });
             Navigation.PopAsync();
         }
 
         private void dltBtn_Clicked(object sender, EventArgs e)
         {
-            MainPage.abonents.Remove(CurrentAbonent);
+            App.abonents.Remove(CurrentAbonent);
             Navigation.PopAsync();
         }
 
         private void cngBtn_Clicked(object sender, EventArgs e)
         {
-            var a = MainPage.abonents.IndexOf(CurrentAbonent);
+            var a = App.abonents.IndexOf(CurrentAbonent);
             CurrentAbonent.Name = nameEntry.Text;
             CurrentAbonent.Address = addressEntry.Text;
             CurrentAbonent.Phone = phoneEntry.Text;
