@@ -34,7 +34,7 @@ namespace Pr12
 
         private void addBtn_Clicked(object sender, EventArgs e)
         {
-            App.abonents.Add(new Abonent { Address = nameEntry.Text, Name = nameEntry.Text, Phone = phoneEntry.Text });
+            App.abonents.Add(new Abonent { Address = addressEntry.Text, Name = nameEntry.Text, Phone = phoneEntry.Text });
             Navigation.PopAsync();
         }
 

@@ -21,6 +21,7 @@
                     </ListView.ItemTemplate>
                 </ListView>
                 <Button Text="Добавить" CornerRadius="10" BackgroundColor="Black" Clicked="Add_click"></Button>
+                <Button x:Name="searchBtn" Text="Поиск" Background="Black" Clicked="searchBtn_Clicked"/>
             </StackLayout>
         </Frame>
     </StackLayout>

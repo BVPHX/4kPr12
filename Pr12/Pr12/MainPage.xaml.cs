@@ -27,5 +27,47 @@ namespace Pr12
             var temp = (Abonent)abonentList.SelectedItem;
             await Navigation.PushAsync(new InfoPage(temp));
         }
+
+        SearchTable searchTable = null;
+        Button button = null;
+
+        private async void searchBtn_Clicked(object sender, EventArgs e)
+        {
+            button = sender as Button;
+            switch (button.Text)
+            {
+                case "Поиск":
+                    searchTable = new SearchTable();
+                    await Navigation.PushAsync(searchTable);
+
+                    break;
+                case "Сброс":
+                    abonentList.ItemsSource = App.abonents;
+                    button.Text = "Поиск";
+                    break;
+
+            }
+
+
+        }
+        private void Search()
+        {
+
+        }
+
+        protected override void OnAppearing()
+        {
+            if (searchTable != null)
+            {
+                var x = abonentList.ItemsSource = App.abonents.Where(n => n.Address == searchTable.SearchingAddress).ToList();
+                if (x != null) abonentList.ItemsSource = x;
+                else DisplayAlert("Ошибка", "Нет подходящих записей", "OK");
+                button.Text = "Сброс";
+                searchTable = null;
+            }
+            base.OnAppearing();
+        }
     }
+
+
 }
