@@ -59,7 +59,7 @@ namespace Pr12
         {
             if (searchTable != null)
             {
-                var x = abonentList.ItemsSource = App.abonents.Where(n => n.Address == searchTable.SearchingAddress).ToList();
+                var x = abonentList.ItemsSource = App.abonents.Where(n => n.Address.Contains(searchTable.SearchingAddress)).ToList();
                 if (x != null) abonentList.ItemsSource = x;
                 else DisplayAlert("Ошибка", "Нет подходящих записей", "OK");
                 button.Text = "Сброс";
